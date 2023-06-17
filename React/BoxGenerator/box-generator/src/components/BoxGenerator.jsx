@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Box from './Box';
 
 const BoxGenerator = () => {
   const [color, setColor] = useState('');
@@ -45,16 +46,7 @@ const BoxGenerator = () => {
 
       <div>
         {boxes.map((box, index) => (
-          <div
-            key={index}
-            style={{
-              backgroundColor: box.color,
-              width: box.size,
-              height: box.size,
-              display: 'inline-block',
-              margin: '5px',
-            }}
-          ></div>
+          <Box index={index} box={box}/>
         ))}
       </div>
     </div>
